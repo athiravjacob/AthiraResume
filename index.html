@@ -16,33 +16,37 @@
             background-color: #f3f4f6;
             color: #1f2937;
             line-height: 1.6;
-            font-size: 1.05rem; /* Slightly increased base font size */
+            font-size: clamp(1rem, 2.5vw, 1.05rem); /* Responsive base font size */
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px; /* Increased for larger screens */
+            width: 90%; /* Flexible width */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1rem;
         }
         header {
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px 0;
+            padding: 1.5rem 0;
         }
         header h1 {
-            font-size: 2.25rem; /* Increased from 2rem */
+            font-size: clamp(1.75rem, 5vw, 2.25rem); /* Responsive header font */
             font-weight: 700;
+            text-align: center;
         }
         header p {
             color: #6b7280;
             margin-top: 0.5rem;
-            font-size: 1.1rem; /* Slightly increased */
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            text-align: center;
         }
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 0.5rem;
-            font-size: 0.95rem; /* Slightly increased from 0.9rem */
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
         }
         .contact-info a {
             color: #1f2937;
@@ -52,25 +56,25 @@
             text-decoration: underline;
         }
         main {
-            padding: 40px 0;
+            padding: 2rem 0;
         }
         section {
             margin-bottom: 2rem;
         }
         section h2 {
-            font-size: 1.75rem; /* Increased from 1.5rem */
+            font-size: clamp(1.5rem, 4vw, 1.75rem);
             font-weight: 700;
             margin-bottom: 1rem;
         }
         section p {
             color: #4b5563;
-            font-size: 1.05rem; /* Slightly increased */
+            font-size: clamp(1rem, 2.5vw, 1.05rem);
         }
         ul {
             list-style: disc;
-            padding-left: 20px;
+            padding-left: 1.5rem;
             color: #4b5563;
-            font-size: 1.05rem; /* Slightly increased */
+            font-size: clamp(1rem, 2.5vw, 1.05rem);
         }
         ul li {
             margin-bottom: 0.5rem;
@@ -79,13 +83,15 @@
             margin-bottom: 1.5rem;
         }
         .project h3 {
-            font-size: 1.35rem; /* Increased from 1.25rem */
+            font-size: clamp(1.2rem, 3vw, 1.35rem);
             font-weight: 500;
         }
         .project a {
             color: #2563eb;
             text-decoration: none;
-            font-size: 0.95rem; /* Slightly increased from 0.9rem */
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            display: block;
+            margin: 0.5rem 0;
         }
         .project a:hover {
             text-decoration: underline;
@@ -93,24 +99,83 @@
         footer {
             background-color: #ffffff;
             text-align: center;
-            padding: 20px 0;
+            padding: 1.5rem 0;
             color: #6b7280;
-            font-size: 0.95rem; /* Slightly increased from 0.9rem */
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
         }
-        @media (max-width: 600px) {
+
+        /* Tablet and smaller desktop screens */
+        @media (max-width: 768px) {
             .container {
-                padding: 0 15px;
+                width: 95%;
+            }
+            header {
+                padding: 1rem 0;
             }
             header h1 {
-                font-size: 1.75rem; /* Increased from 1.5rem */
+                font-size: clamp(1.5rem, 4.5vw, 2rem);
             }
             section h2 {
-                font-size: 1.5rem; /* Increased from 1.25rem */
+                font-size: clamp(1.3rem, 3.5vw, 1.5rem);
             }
             .contact-info {
                 flex-direction: column;
+                align-items: center;
                 gap: 0.5rem;
-                font-size: 0.9rem; /* Slightly increased */
+            }
+            .contact-info span {
+                display: none; /* Hide separators for cleaner look */
+            }
+            main {
+                padding: 1.5rem 0;
+            }
+        }
+
+        /* Mobile screens */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 0 0.75rem;
+            }
+            header h1 {
+                font-size: clamp(1.25rem, 4vw, 1.75rem);
+            }
+            header p {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+            .contact-info {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+            section h2 {
+                font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+            }
+            section p, ul {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+            .project h3 {
+                font-size: clamp(1.1rem, 3vw, 1.25rem);
+            }
+            .project a {
+                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            }
+            footer {
+                padding: 1rem 0;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1100px;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            .project h3 {
+                font-size: 1.5rem;
             }
         }
     </style>
