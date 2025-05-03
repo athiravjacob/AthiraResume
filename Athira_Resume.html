@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athira V Jacob - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.22.5/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const App = () => {
+            return (
+                <div className="min-h-screen bg-gray-100 font-sans text-gray-800">
+                    {/* Header */}
+                    <header className="bg-white shadow-sm py-6">
+                        <div className="max-w-4xl mx-auto px-4">
+                            <h1 className="text-3xl font-bold">Athira V Jacob</h1>
+                            <p className="text-gray-600 mt-1">Full-Stack Developer</p>
+                            <div className="flex flex-wrap gap-4 mt-2 text-sm">
+                                <a href="mailto:athiravjacob2024@gmail.com" className="hover:underline">athiravjacob2024@gmail.com</a>
+                                <span>|</span>
+                                <span> 9895397484</span>
+                                <span>|</span>
+                                <a href="https://www.linkedin.com/in/athira-v-jacob-920487246/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+                                <span>|</span>
+                                <a href="https://github.com/athiravjacob" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Main Content */}
+                    <main className="max-w-4xl mx-auto px-4 py-8">
+                        {/* About Section */}
+                        <section className="mb-8">
+                            <h2 className="text-2xl font-semibold mb-4">About</h2>
+                            <p className="text-gray-700">
+                                Full-Stack Developer skilled in JavaScript, React, Node.js, Express, and MongoDB. Proficient in building secure, scalable MERN-stack web applications with TypeScript. Dedicated to creating user-centric solutions and collaborating effectively in team settings.
+                            </p>
+                        </section>
+
+                        {/* Skills Section */}
+                        <section className="mb-8">
+                            <h2 className="text-2xl font-semibold mb-4">Skills</h2>
+                            <ul className="list-disc list-inside text-gray-700 space-y-1">
+                                <li><strong>Frontend:</strong> React.js, JavaScript, TypeScript, Tailwind CSS, HTML, CSS</li>
+                                <li><strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT Authentication</li>
+                                <li><strong>Database:</strong> MongoDB, Mongoose</li>
+                                <li><strong>State Management:</strong> Redux</li>
+                            </ul>
+                        </section>
+
+                        {/* Projects Section */}
+                        <section className="mb-8">
+                            <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+                            <div className="space-y-6">
+                                <div>
+                                    <h3 className="text-xl font-medium">Neighborly - Community Help Platform</h3>
+                                    <a href="https://github.com/athiravjacob/neighborly" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">github.com/athiravjacob/neighborly</a>
+                                    <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                        <li>Built type-safe MERN-stack application using TypeScript for enhanced scalability.</li>
+                                        <li>Implemented real-time chat with Socket.IO and location-based search with GeoJSON in MongoDB.</li>
+                                        <li>Integrated Google Login, Stripe for payments, and Cloudinary for image management.</li>
+                                        <li>Optimized performance using React Query, Axios, and Yup/Joi for data validation.</li>
+                                        <li>Deployed frontend on Vercel and backend on AWS for reliable hosting.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-medium">Muse Studio - Ceramic E-Commerce Platform</h3>
+                                    <a href="https://github.com/athiravjacob/MuseStudio" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">github.com/athiravjacob/MuseStudio</a>
+                                    <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                        <li>Developed full-stack platform using Node.js, Express.js, MongoDB, and EJS templating.</li>
+                                        <li>Designed admin panel for streamlined product and order management.</li>
+                                        <li>Implemented Multer for image uploads and Razorpay for secure payments.</li>
+                                        <li>Created dynamic offer system and sales dashboard with data visualization.</li>
+                                        <li>Deployed on AWS to ensure scalability and high performance.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Education Section */}
+                        <section>
+                            <h2 className="text-2xl font-semibold mb-4">Education</h2>
+                            <p className="text-gray-700">
+                                <strong>Bachelor of Computer Applications</strong><br />
+                                Mahatma Gandhi University<br />
+                                2014–2017<br />
+                                CGPA: 7.44/10
+                            </p>
+                        </section>
+                    </main>
+
+                    {/* Footer */}
+                    <footer className="bg-white py-4 text-center text-gray-600 text-sm">
+                        <p>&copy; 2025 Athira V Jacob. All rights reserved.</p>
+                    </footer>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
